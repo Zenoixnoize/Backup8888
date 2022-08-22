@@ -1078,45 +1078,6 @@ case 'sex':{
              await GarfieldNeural.sendButtonText(m.chat, buttons, jawab,`Neural Ai` , m, {mentions: ments})
             }
             break
-            case 'stk':{
-					 var ttinullimage = await axios.get(`https://api.xteam.xyz/attp?file&text=${text}`, { responseType: 'arraybuffer' })
-        await GarfieldNeural.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.sticker, { mimetype: Mimetype.webp })
-					}
-break
-case 'antibad': {
-if(text == 'on'){
-Antibd = true
-if(Antibd = true){m.reply("Anti bad On ⚠️")
-}
-}
-}
-break
-case 'pakaya': {
-if(Antibd = true){
-reply("Bad word")
-}
-            }
-            break
-            case 'getsong': {
-            
-                if (!text) return reply(`Example : ${prefix + command} kuweni`)
-                let yts = require("yt-search")
-                let search = await yts(text)
-                let anu = search.videos[Math.floor(Math.random() * 1)]       
-                var Linkx = anu.url
-               
-                let { tharinduaudio } = require('./lib/ytmp3')
-                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 320kbps`)
-                let quality = args[1] ? args[1] : '320kbps'
-                let media = await tharinduaudio(Linkx, quality)
-                if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                GarfieldNeural.sendImage(m.chat, media.thumb,  '```Title :``` *' + media.title + '*\n```URL :``` *' + isUrl(Linkx) + '*\n```Quality :``` *320Kbps*\n', m)
-                GarfieldNeural.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `{media.title}.m4a` }, { quoted: m }) 
-            
-            }
-          
-            break
-      
       
             case 'hellou': {
                 let { tharinduaudio } = require('./lib/ytmp3')
